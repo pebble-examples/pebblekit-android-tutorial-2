@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class PagerFragment extends Fragment {
 
-    private int position;
+    private int mPosition;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,8 +32,8 @@ public class PagerFragment extends Fragment {
         // Set the page label
         TextView textView = (TextView)rootView.findViewById(R.id.text_view);
         Bundle args = getArguments();
-        position = args.getInt("position");
-        textView.setText("Page " + position);
+        mPosition = args.getInt("position");
+        textView.setText("Page " + mPosition);
 
         return rootView;
     }
