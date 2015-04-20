@@ -1,7 +1,6 @@
 # pebblekit-android-tutorial-2
 
-Example project code for the 
-[PebbleKit Android Tutorial (Part 2)](https://developer.getpebble.com/getting-started/android-tutorial/). 
+Example project code for the PebbleKit Android Tutorial (Part 2). 
 
 The `starter` branch contains the starter project, to be completed by following
 the tutorial. The `master` branch contains the completed project.
