@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 import com.getpebble.android.kit.PebbleKit;
 import com.getpebble.android.kit.util.PebbleDictionary;
@@ -44,6 +45,7 @@ public class MainActivity extends FragmentActivity {
                 public void receiveData(Context context, int transactionId, PebbleDictionary dict) {
                     // Always ACK
                     PebbleKit.sendAckToPebble(context, transactionId);
+                    Log.i("receiveData", "Got message from Pebble!");
 
                     // Up received?
                     if(dict.getInteger(KEY_BUTTON_UP) != null) {
