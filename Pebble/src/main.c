@@ -46,14 +46,10 @@ static void main_window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
-#if defined(PBL_SDK_2)
-  s_output_layer = text_layer_create(GRect(0, 60, bounds.size.w, bounds.size.h));
-#elif defined(PBL_SDK_3)
   const int text_height = 20;
   const GEdgeInsets text_insets = GEdgeInsets((bounds.size.h - text_height) / 2, 0);
 
   s_output_layer = text_layer_create(grect_inset(bounds, text_insets));
-#endif
   text_layer_set_text(s_output_layer, "Press up or down.");
   text_layer_set_text_alignment(s_output_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_output_layer));
